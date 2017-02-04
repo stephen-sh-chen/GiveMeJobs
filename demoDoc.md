@@ -51,8 +51,10 @@ public class Solution {
 - x<sup>2</sup>
 
 ### Space Complexity
+
 ### Ref Links
 - [139. Word Break](https://leetcode.com/problems/word-break/)
+
 ### Source Code
 ```java
 public class Solution {
