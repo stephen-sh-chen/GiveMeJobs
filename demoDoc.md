@@ -41,11 +41,14 @@ public class Solution {
 ```
 
 ### Thoughts
+log<sub>b</sub><sup>x</sup>+log<sub>b</sub><sup>y</sup>
+log<sub>2</sub>(n)
+x<sup>2</sup>
+
 ### Time Complexity
-$$I = \int \rho R^{2} dV$$
-$$log<sub>b</sub><sup>x</sup>+log<sub>b</sub><sup>y</sup>$$
-$$log<sub>2</sub>(n)$$
-$$x<sup>2</sup>$$
+log<sub>b</sub><sup>x</sup>+log<sub>b</sub><sup>y</sup>
+log<sub>2</sub>(n)
+x<sup>2</sup>
 
 ### Space Complexity
 ### Ref Links
