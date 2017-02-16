@@ -28,15 +28,15 @@ A solution set is:
 Each number in C may only be used once in the combination.
 
 ---------------------------------------------------------------------------
-# [Solution 1 - ]
+# [Solution - Combination Sum]
 
 
 ### Thoughts
 
 
 ### Complexity
-- Time: O(n<sup>2</sup>)
-- Space: O(n)
+- Time:
+- Space:
 
 
 ### Ref Links
@@ -44,11 +44,24 @@ Each number in C may only be used once in the combination.
 
 ### Source Code
 ```python
+class Solution(object):
+    def combinationSum(self, candidates, target):
+        res = []
+        self.helper(candidates, target, 0, [], res)
+        return res
 
+    def helper(self, candidates, target, index, curList, res):
+        if target < 0:
+            pass
+        elif 0 == target:
+            res.append(curList)
+        elif 0 < target:
+            for i in xrange(index, len(candidates)):
+                self.helper(candidates, target-candidates[i], i, curList+[candidates[i]], res)
 ```
 
 ---------------------------------------------------------------------------
-# [Solution 2 - Using ]
+# [Solution 2 - Combination Sum II ]
 
 
 ### Thoughts
@@ -56,8 +69,8 @@ Each number in C may only be used once in the combination.
 
 
 ### Complexity
-- Time: O(n<sup>2</sup>)
-- Space: O(n)
+- Time:
+- Space:
 
 
 ### Ref Links
@@ -65,6 +78,23 @@ Each number in C may only be used once in the combination.
 
 ### Source Code
 ```python
+class Solution(object):
+    def combinationSum2(self, candidates, target):
+        res = []
+        candidates.sort()
+        self.helper(candidates, target, 0, [], res)        
+        return res
 
-}
+    def helper(self, nums, target, index, curList, res):
+        if target < 0:
+            return
+        elif target == 0:
+            res.append(curList)
+            return
+        else:
+            for i in xrange(index, len(nums)):
+                if i > index and nums[i-1] == nums[i]:
+                    continue
+                self.helper(nums, target-nums[i], i+1, curList+[nums[i]], res)
+
 ```
