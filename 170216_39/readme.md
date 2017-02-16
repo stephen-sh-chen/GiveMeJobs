@@ -32,7 +32,7 @@ Each number in C may only be used once in the combination.
 
 
 ### Thoughts
-
+DFS + [剪枝](http://imgur.com/a/hSowh)
 
 ### Complexity
 - Time:
@@ -61,12 +61,12 @@ class Solution(object):
 ```
 
 ---------------------------------------------------------------------------
-# [Solution 2 - Combination Sum II ]
+# [Solution - Combination Sum II ]
 
 
 ### Thoughts
-
-
+DFS + [剪枝](http://imgur.com/a/hSowh),
+從下一個開始(i + 1)
 
 ### Complexity
 - Time:
