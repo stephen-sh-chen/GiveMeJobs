@@ -32,8 +32,8 @@ Each number in C may only be used once in the combination.
 
 
 ### Thoughts
-DFS + 剪枝  
-![alt tag](http://imgur.com/a/hSowh)
+DFS + [剪枝](http://imgur.com/a/hSowh)
+
 ### Complexity
 - Time:
 - Space:
@@ -65,8 +65,8 @@ class Solution(object):
 
 
 ### Thoughts
-DFS + 剪枝 + 從下一個開始(i + 1)  
-![alt tag](http://imgur.com/a/hSowh)
+DFS + [剪枝](http://imgur.com/a/hSowh),
+從下一個開始(i + 1)
 
 ### Complexity
 - Time:
