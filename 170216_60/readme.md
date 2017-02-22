@@ -83,3 +83,40 @@ public String getPermutation(int n, int k){
 }
 ```
 
+---------------------------------------------------------------------------
+# [Solution 2 - Python]
+
+
+### Thoughts
+Directly choose the exact direction instead of traverse all possibilities.
+Not maintain an boolean array and directly delete item from nums array
+
+
+### Complexity
+- Time: O(n)
+- Space: O(1)
+
+
+### Ref Links
+-
+
+### Source Code
+```python
+class Solution(object):
+    def getPermutation(self, n, k):
+        """
+        :type n: int
+        :type k: int
+        :rtype: str
+        """
+        res = ""
+        k -= 1
+        nums = [i for i in range(1, n+1)]
+        for i in xrange(n):
+            if len(nums) == 1:
+                return res + str(nums[0])
+            n -= 1
+            index, k = divmod(k, math.factorial(n))
+            res = res + str(nums[index])
+            del nums[index]
+```
