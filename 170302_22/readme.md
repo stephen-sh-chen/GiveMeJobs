@@ -101,7 +101,8 @@ def generateParenthesis(self, n):
         return res
 
     def helper(self, n, numLeft, numRight, str, res):
-        if len(str) == n * 2:
+        # equals to len(str) == n * 2
+        if numRight == n:
             res.append(str)
             return
         if numLeft < n:
